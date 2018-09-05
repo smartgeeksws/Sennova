@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class BaseDatosHelper extends SQLiteOpenHelper {
 
-    public static final int VERSION_BASE_DATOS = 1;
-    public static final String NOMBRE_BASE_DATOS = "sennova.db";
+    private static final int VERSION_BASE_DATOS = 1;
+    private static final String NOMBRE_BASE_DATOS = "sennova.db";
 
     private static final String CREAR_TABLA_CULTIVOS =
             "CREATE TABLE " + TablaDatos.TablaCultivos.NOMBRE_TABLA + " ("+
@@ -52,5 +52,6 @@ public class BaseDatosHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaCultivos.NOMBRE_TABLA);
         db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaEnfermedades.NOMBRE_TABLA);
         db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaImagenes.NOMBRE_TABLA);
+        onCreate(db);
     }
 }
