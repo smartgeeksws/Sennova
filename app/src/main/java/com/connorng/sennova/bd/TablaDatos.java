@@ -28,5 +28,15 @@ public final class TablaDatos {
         public static final String IMAGENES_TIPO = "tipo";
         public static final String FK_TABLA = "id_tabla";
     }
+    public static class TablaUsuarios implements BaseColumns{
+        public static final String NOMBRE_TABLA = "usuarios";
+        public static final String USUARIOS_ID = "id";
+        public static final String USUARIOS_NOMBRE = "nombre";
+        public static final String USUARIOS_APELLIDO = "apellido";
+        public static final String USUARIOS_SEXO = "sexo";
+        public static final String USUARIOS_CORREO = "correo";
+        public static final String USUARIOS_TELEFONO = "telefono";
+        public static final String USUARIOS_PASSWORD = "password";
+    }
 
 }

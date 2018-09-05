@@ -16,14 +16,15 @@ public class BaseDatosHelper extends SQLiteOpenHelper {
                     TablaDatos.TablaCultivos.COLUMNA_DESCRIPCION + "TEXT)";
 
     private static final String CREAR_TABLA_ENFERMEDADES =
-            "CRETE TABLE " + TablaDatos.TablaEnfermedades.NOMBRE_TABLA + " ("+
+            "CREATE TABLE " + TablaDatos.TablaEnfermedades.NOMBRE_TABLA + " ("+
                     TablaDatos.TablaEnfermedades.ENFERMEDAD_ID + " INTEGER PRIMARY KEY,"+
                     TablaDatos.TablaEnfermedades.ENFERMERDAD_TIPO + " TEXT,"+
                     TablaDatos.TablaEnfermedades.ENFERMEDAD_NOMBRE + " TEXT,"+
                     TablaDatos.TablaEnfermedades.ENFERMEDAD_DESCRIPCION + " TEXT,"+
                     TablaDatos.TablaEnfermedades.ENFERMEDAD_SINTOMAS + " TEXT,"+
                     TablaDatos.TablaEnfermedades.ENFERMEDAD_TRATAMIENTO + " TEXT,"+
-                    " FOREING KEY " + TablaDatos.TablaEnfermedades.FK_CULTIVO + " REFERENCES " + TablaDatos.TablaCultivos.CULTIVO_ID + " )";
+                    TablaDatos.TablaEnfermedades.FK_CULTIVO + " INTEGER,"+
+                    " FOREIGN KEY (" + TablaDatos.TablaEnfermedades.FK_CULTIVO + ") REFERENCES "+TablaDatos.TablaEnfermedades.NOMBRE_TABLA+ " ("+ TablaDatos.TablaCultivos.CULTIVO_ID + " ))";
 
     private static final String CREAR_TABLA_IMAGENES =
             "CREATE TABLE " + TablaDatos.TablaImagenes.NOMBRE_TABLA + " ("+
