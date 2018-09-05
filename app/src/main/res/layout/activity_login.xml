@@ -21,7 +21,6 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:fontFamily="@font/brnsl"
-        android:drawableLeft="@drawable/"
         android:drawablePadding="8dp"
         android:ems="10"
         android:maxLines="1"
