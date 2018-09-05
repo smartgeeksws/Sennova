@@ -38,5 +38,4 @@ public final class TablaDatos {
         public static final String USUARIOS_TELEFONO = "telefono";
         public static final String USUARIOS_PASSWORD = "password";
     }
-
 }
