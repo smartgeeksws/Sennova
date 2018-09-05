@@ -31,9 +31,6 @@
             android:name=".RegistroActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MenuCultivosActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".EnfermedadesActivity"
             android:screenOrientation="portrait" />
         <activity
