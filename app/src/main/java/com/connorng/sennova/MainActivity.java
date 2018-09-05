@@ -32,7 +32,5 @@ RecyclerView rvMenuCultivos;
                 new CultivosEntidad(R.drawable.platano_maduro,"Platano","Cultivo dado en el CEFA..."));
         AdaptadorMain adaptadorMain = new AdaptadorMain(listaCultivo);
         rvMenuCultivos.setAdapter(adaptadorMain);
-
-
     }
 }

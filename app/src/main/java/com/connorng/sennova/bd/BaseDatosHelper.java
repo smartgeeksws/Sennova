@@ -33,6 +33,17 @@ public class BaseDatosHelper extends SQLiteOpenHelper {
                     TablaDatos.TablaImagenes.IMAGENES_URL + " TEXT,"+
                     TablaDatos.TablaImagenes.IMAGENES_TIPO + " TEXT,"+
                     TablaDatos.TablaImagenes.FK_TABLA + " )";
+    private  static final String CREAR_TABLA_USUARIOS =
+            "CREATE TABLE " + TablaDatos.TablaUsuarios.NOMBRE_TABLA + " ("+
+                    TablaDatos.TablaUsuarios.USUARIOS_ID + " INTEGER PRIMARY KEY,"+
+                    TablaDatos.TablaUsuarios.USUARIOS_NOMBRE + " TEXT,"+
+                    TablaDatos.TablaUsuarios.USUARIOS_APELLIDO + " TEXT,"+
+                    TablaDatos.TablaUsuarios.USUARIOS_SEXO + " TEXT,"+
+                    TablaDatos.TablaUsuarios.USUARIOS_CORREO + " TEXT,"+
+                    TablaDatos.TablaUsuarios.USUARIOS_TELEFONO + " TEXT,"+
+                    TablaDatos.TablaUsuarios.USUARIOS_PASSWORD + " TEXT)";
+
+
 
 
 
@@ -46,6 +57,7 @@ public class BaseDatosHelper extends SQLiteOpenHelper {
         db.execSQL(CREAR_TABLA_CULTIVOS);
         db.execSQL(CREAR_TABLA_ENFERMEDADES);
         db.execSQL(CREAR_TABLA_IMAGENES);
+        db.execSQL(CREAR_TABLA_USUARIOS);
     }
 
     @Override
@@ -53,6 +65,7 @@ public class BaseDatosHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaCultivos.NOMBRE_TABLA);
         db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaEnfermedades.NOMBRE_TABLA);
         db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaImagenes.NOMBRE_TABLA);
+        db.execSQL("DROP TABLE IF EXISTS "+ TablaDatos.TablaUsuarios.NOMBRE_TABLA);
         onCreate(db);
     }
 }
