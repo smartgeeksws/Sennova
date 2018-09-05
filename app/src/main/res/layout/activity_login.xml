@@ -1,67 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     tools:layout_editor_absoluteY="81dp">
-
-    <EditText
-        android:id="@+id/etCorreoLogin"
-        android:layout_width="300dp"
+    
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
-        android:layout_marginTop="147dp"
-        android:padding="10dp"
-        android:background="@drawable/edit_text_redondeado"
-        android:hint="Correo"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:fontFamily="@font/brnsl"
-        android:ems="10"
-        android:maxLines="1"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/etPasswordLogin"
-        app:layout_constraintEnd_toEndOf="@+id/etPasswordLogin"
-        app:layout_constraintStart_toStartOf="@+id/etPasswordLogin"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:id="@+id/llPrincipal">
 
-    <EditText
-        android:id="@+id/etPasswordLogin"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="69dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginStart="31dp"
-        android:padding="10dp"
-        android:background="@drawable/edit_text_redondeado"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:fontFamily="@font/brnsl"
-        android:textSize="20sp"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/btnIngresarLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreoLogin" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/colorBlanco"
+            android:fontFamily="@font/brnsl"/>
 
-    <Button
-        android:id="@+id/btnIngresarLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="146dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:text="Ingresar"
-        android:textSize="15sp"
-        android:textColor="#ffffff"
-        android:background="@drawable/boton_redondo"
-        android:fontFamily="@font/brnsl"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordLogin" />
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/etCorreoLogin"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_redondeado"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/email"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/brnsl"
+            android:ems="10"
+            android:maxLines="1"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/llPrincipal"/>
+
+        <EditText
+            android:id="@+id/etPasswordLogin"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/edit_text_redondeado"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/llave"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/brnsl"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/etCorreoLogin"/>
+
+        <Button
+            android:id="@+id/btnIngresarLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/boton_redondo"
+            android:fontFamily="@font/brnsl"
+            android:layout_below="@id/etPasswordLogin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta?. Registrate aqui"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/brnsl"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/btnIngresarLogin"/>
+
+
+
+</RelativeLayout>
