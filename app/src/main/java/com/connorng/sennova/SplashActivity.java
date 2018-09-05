@@ -13,6 +13,8 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //ocultar barra de navegacion
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
