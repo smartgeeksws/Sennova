@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    tools:layout_editor_absoluteY="81dp"
-    android:background="#ffffff">
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/etCorreoLogin"
@@ -21,7 +20,6 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:fontFamily="@font/brnsl"
-        android:drawablePadding="8dp"
         android:ems="10"
         android:maxLines="1"
         android:textColor="@color/colorPrimary"
